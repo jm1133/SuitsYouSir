@@ -6,7 +6,7 @@ Inspired by the legendary **"Ooh, suits you, sir!"** sounds from *The Fast Show*
 
 ---
 
-## Features
+## 📋Features
 
 * 🎵 Plays a random sound when an application starts
 * 🔒 Only plays one sound at a time
@@ -20,7 +20,7 @@ Inspired by the legendary **"Ooh, suits you, sir!"** sounds from *The Fast Show*
 
 ---
 
-## How It Works
+## 🤔How It Works
 
 Suits You Sir monitors Windows processes using [`psutil`](https://github.com/giampaolo/psutil).
 
@@ -38,13 +38,13 @@ This means launching several applications at once won't result in a horrible pil
 
 ---
 
-## Contributing
+## 💡Contributing
 
 Contributions are welcome!
 
 The easiest way to contribute is by adding more sounds.
 
-### 🔊 Adding a Sound
+### 🎙️Adding a Sound
 
 Just drop a `.wav`, `.mp3`, or `.ogg` file into:
 
@@ -68,7 +68,7 @@ Sounds\
 └── another_sound.mp3
 ```
 
-### Audio Contributions
+### 🎤Audio Contributions
 
 For *The Fast Show* sounds, the original audio remains the property of its respective rights holders.
 
@@ -85,7 +85,7 @@ You can also contribute by:
 
 ---
 
-## Sounds
+## 🔊Sounds
 
 Suits You Sir supports:
 
@@ -107,7 +107,7 @@ They are included as part of this fan-made project and are not original recordin
 
 ---
 
-## Application Log
+## 🧾Application Log
 
 Detected application launches are recorded in:
 
@@ -133,9 +133,9 @@ It does **not** record:
 
 ---
 
-## Running From Source
+## ⌨️Running From Source
 
-### Requirements
+### 📋Requirements
 
 * Windows
 * Python 3
@@ -155,7 +155,7 @@ Install them with:
 python3 -m pip install psutil pygame pystray Pillow
 ```
 
-### Running
+### 🏃‍♂️‍➡️Running
 
 Run:
 
@@ -171,7 +171,7 @@ Right-click the tray icon and select **Quit** to close it.
 
 ---
 
-## Running the `.exe`
+## 🏃‍♂️‍➡️Running the `.exe`
 
 The compiled application is completely windowless, so no console window appears.
 
@@ -191,7 +191,7 @@ SuitsYouSir.exe
 
 ---
 
-## Building
+## 🧱Building
 
 A PowerShell build script is included:
 
@@ -220,7 +220,7 @@ SuitsYouSir.exe
 SuitsYouSir.zip
 ```
 
-### Manual Build
+### 🛠️Manual Build
 
 You can also build it manually:
 
@@ -230,7 +230,7 @@ python3 -m PyInstaller --onefile --windowed --name "SuitsYouSir" --add-data "Sou
 
 ---
 
-## Project Structure
+## 🏗️Project Structure
 
 ```text
 SuitsYouSir/
@@ -256,7 +256,7 @@ The build script automatically removes these when the build finishes.
 
 ---
 
-## Technology
+## 🖥️Technology
 
 Suits You Sir is built using:
 
@@ -269,7 +269,7 @@ Suits You Sir is built using:
 
 ---
 
-## Bug Reports
+## 🐜Bug Reports
 
 If you find a bug, please include:
 
@@ -283,7 +283,7 @@ If the problem is related to a particular application launching, include the app
 
 ---
 
-## Future Ideas
+## 🤔Future Ideas
 
 Possible future features include:
 
@@ -300,7 +300,7 @@ Possible future features include:
 
 ---
 
-## Why?
+## ❓Why?
 
 Because opening stuff is boring.
 
@@ -312,7 +312,7 @@ is considerably less boring.
 
 ---
 
-## Credits & Attribution
+## 🫡Credits & Attribution
 
 **Suits You Sir** is an unofficial fan-made project inspired by *The Fast Show*.
 
@@ -326,7 +326,7 @@ The included audio assets remain the property of their respective rights holders
 
 ---
 
-## Disclaimer
+## ❗Disclaimer
 
 This project is made for fun and is not intended to claim ownership of any third-party material.
 
@@ -344,7 +344,7 @@ If distributing a version containing third-party audio, make sure you have the a
 
 ---
 
-## Licensing
+## 📜Licensing
 
 The **source code** for this project may be used and modified freely.
 
