@@ -19,6 +19,7 @@ python3 -m PyInstaller `
     --windowed `
     --name "SuitsYouSir" `
     --add-data "Sounds;Sounds" `
+    --icon Icon.ico `
     main.py
 
 if ($LASTEXITCODE -ne 0) {
