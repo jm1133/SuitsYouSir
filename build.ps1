@@ -56,7 +56,6 @@ Write-Host ""
 
 Write-Host "Output:" -ForegroundColor Cyan
 Write-Host "  .\SuitsYouSir.exe" -ForegroundColor White
-Write-Host "  .\SuitsYouSir.zip" -ForegroundColor White
 Write-Host ""
 
 Read-Host "Press Enter to close"
