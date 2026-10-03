@@ -271,6 +271,8 @@ IGNORED_PROCESSES = {
 }
 
 
+IGNORED_PROCESSES = {name.lower() for name in IGNORED_PROCESSES}
+
 pygame.mixer.init()
 
 sound_lock = threading.Lock()
@@ -348,7 +350,7 @@ def monitor_processes():
         for pid in started:
             name = current_processes[pid]
 
-            if name not in IGNORED_PROCESSES:
+            if name.lower() not in IGNORED_PROCESSES:
                 log_app(name)
                 play_random_sound()
 
