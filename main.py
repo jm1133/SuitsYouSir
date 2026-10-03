@@ -1,5 +1,9 @@
-import os, random, sys, threading, time, psutil, pygame, pystray; from PIL import Image, ImageDraw
+import os, random, sys, threading, time, psutil, pygame, ctypes, pystray; from PIL import Image, ImageDraw
 
+mutex = ctypes.windll.kernel32.CreateMutexW(None, False, "SuitsYouSir_SingleInstance")
+
+if ctypes.windll.kernel32.GetLastError() == 183:
+    sys.exit(0)
 
 if getattr(sys, "frozen", False):
     APP_DIR = os.path.dirname(sys.executable)
@@ -57,6 +61,7 @@ IGNORED_PROCESSES = {
     "CrossDeviceResume.exe",
     "CrossDeviceService.exe",
     "csrss.exe",
+    "SuitsYouSir.exe",
     "ctfmon.exe",
     "dasHost.exe",
     "DCv2.exe",
