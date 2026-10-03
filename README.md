@@ -118,9 +118,9 @@ SuitsYouSir.log
 Example:
 
 ```text
-[2026-10-02 19:04:21] chrome.exe
-[2026-10-02 19:04:29] Discord.exe
-[2026-10-02 19:05:03] steam.exe
+[03/10/2026 13:32:30] discord.exe
+[03/10/2026 13:32:30] Modrinth App.exe
+[03/10/2026 13:22:17] WhatsApp.Root.exe
 ```
 
 The log **only records applications being opened**.
