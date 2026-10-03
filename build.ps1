@@ -21,6 +21,7 @@ python3 -m PyInstaller `
     --windowed `
     --name "SuitsYouSir" `
     --add-data "Sounds;Sounds" `
+    --add-data "Icon.ico;." `
     --icon Icon.ico `
     main.py
 

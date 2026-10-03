@@ -1,14 +1,4 @@
-import os
-import random
-import sys
-import threading
-import time
-
-import psutil
-import pygame
-import pystray
-
-from PIL import Image, ImageDraw
+import os, random, sys, threading, time, psutil, pygame, pystray; from PIL import Image, ImageDraw
 
 
 if getattr(sys, "frozen", False):
@@ -268,6 +258,43 @@ IGNORED_PROCESSES = {
     "vivaldi.exe",
     "WMIADAP.exe",
     "wermgr.exe",
+    "sc.exe",
+    "8GadgetPack.exe",
+    "sidebar.exe",
+    "PowerToys.CropAndLock.exe",
+    "PowerToys.Peek.UI.exe",
+    "PowerToys.PowerLauncher.exe",
+    "PowerToys.ColorPickerUI.exe",
+    "SCEWIN_64.exe",
+    "dxgiadaptercache.exe",
+    "dbInstaller.exe",
+    "whoami.exe",
+    "CompPkgSrv.exe",
+    "code-tunnel.exe",
+    "WerFault.exe",
+    "tasklist.exe",
+    "taskhost.exe",
+    "mscopilot_proxy.exe",
+    "DataExchangeHost.exe",
+    "sdbinst.exe",
+    "prevhost.exe",
+    "gameoverlayui64.exe",
+    "MpCmdRun.exe",
+    "CHXSmartScreen.exe",
+    "nvrla.exe",
+    "PresentMon_x64.exe",
+    "OneDriveLauncher.exe",
+    "FvContainer.exe",
+    "FvContainer.System.exe",
+    "FileOperator.exe",
+    "dxgiadaptercache.exe",
+    "OAWrapper.exe",
+    "jp2launcher.exe",
+    "StoreDesktopExtension.exe",
+    "BackgroundDownload.exe",
+    "SoftLandingTask.exe",
+    "GameBarPresenceWriter.exe",
+    "WMIADAP.exe",
 }
 
 
@@ -280,7 +307,7 @@ log_lock = threading.Lock()
 
 
 def log_app(name):
-    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+    timestamp = time.strftime("%d/%m/%Y %H:%M:%S")
 
     with log_lock:
         with open(LOG_FILE, "a", encoding="utf-8") as file:
@@ -357,18 +384,6 @@ def monitor_processes():
         known_processes = current_processes
 
 
-def create_icon():
-    image = Image.new("RGB", (64, 64), "black")
-
-    draw = ImageDraw.Draw(image)
-
-    draw.rectangle((8, 8, 56, 56), outline="white", width=4)
-
-    draw.text((21, 19), "♪", fill="white")
-
-    return image
-
-
 def quit_app(icon, item):
     pygame.mixer.music.stop()
     icon.stop()
@@ -377,7 +392,7 @@ def quit_app(icon, item):
 def start_tray():
     icon = pystray.Icon(
         "SuitsYouSir",
-        create_icon(),
+        Image.open(os.path.join(RESOURCE_DIR, "Icon.ico")),
         "Suits You Sir",
         menu=pystray.Menu(pystray.MenuItem("Quit", quit_app)),
     )
