@@ -8,6 +8,7 @@ Write-Host "[1/4] Cleaning old files..." -ForegroundColor Yellow
 Remove-Item "build" -Recurse -Force -ErrorAction SilentlyContinue
 Remove-Item "dist" -Recurse -Force -ErrorAction SilentlyContinue
 Remove-Item "SuitsYouSir.spec" -Force -ErrorAction SilentlyContinue
+Stop-Process -Name "SuitsYouSir" -ErrorAction SilentlyContinue
 Remove-Item "SuitsYouSir.exe" -Force -ErrorAction SilentlyContinue
 
 Write-Host "       Done!" -ForegroundColor Green
