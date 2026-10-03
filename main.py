@@ -1,5 +1,6 @@
 import os
 import random
+import sys
 import threading
 import time
 
@@ -9,8 +10,17 @@ import pystray
 
 from PIL import Image, ImageDraw
 
-SOUNDS_FOLDER = os.path.join(os.path.dirname(__file__), "Sounds")
-LOG_FILE = os.path.join(os.path.dirname(__file__), "SuitsYouSir.log")
+
+if getattr(sys, "frozen", False):
+    APP_DIR = os.path.dirname(sys.executable)
+    RESOURCE_DIR = sys._MEIPASS
+else:
+    APP_DIR = os.path.dirname(os.path.abspath(__file__))
+    RESOURCE_DIR = APP_DIR
+
+
+SOUNDS_FOLDER = os.path.join(RESOURCE_DIR, "Sounds")
+LOG_FILE = os.path.join(APP_DIR, "SuitsYouSir.log")
 
 CHECK_INTERVAL = 0.5
 
